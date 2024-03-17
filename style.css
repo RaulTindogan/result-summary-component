@@ -42,10 +42,13 @@ body {
     font-family: "Hanken Grotesk", sans-serif;
     min-height: 100vh;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .result-container {
@@ -61,6 +64,7 @@ main {
 
 h1 {
     font-size: 1.1rem;
+    margin-bottom: 1.1rem;
 }
 
 .circle {
@@ -90,6 +94,10 @@ h1 {
 h2 {
     margin-bottom: .5rem;
     font-weight: 600;
+    text-align: center;
+}
+
+.result-info {
     text-align: center;
 }
 
@@ -173,4 +181,40 @@ button {
 
 button:hover {
     background-color: var(--Light-royal-blue);
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        margin: 1.1rem 0;
+        max-width: 450px;
+        border-radius: 1.1rem;
+        box-shadow: 8px 8px 10px rgba(77, 77, 77, 0.164);
+        border: 1px solid rgba(124, 124, 124, 0.164);
+    }
+
+    .result-container {
+        border-radius: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        max-width: 800px;
+        width: 700px;
+    }
+
+    .result-container, .summary-container {
+        width: 50%;
+    }
+
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
 }
